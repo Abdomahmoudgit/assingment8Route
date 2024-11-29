@@ -77,6 +77,7 @@ qoutesArray = [
 
 function newQuote() {
   var index = getUniqeNumber();
+  console.log(index);
   qoutesArray[index];
   qouteSection.innerHTML = `<h2>${qoutesArray[index].Text}<br><br>${qoutesArray[index].owner}<br><h6>${qoutesArray[index].tags}</h6><br><h6>${qoutesArray[index].likes}</h6></h2>`;
 }
@@ -88,7 +89,7 @@ var lastRndNumber;
 var getUniqeNumber = function () {
   var rndNumber;
   do {
-    rndNumber = getRndInteger(0, 10);
+    rndNumber = getRndInteger(0, 9);
   } while (rndNumber === lastRndNumber);
   lastRndNumber = rndNumber;
   return rndNumber;
